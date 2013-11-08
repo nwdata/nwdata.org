@@ -1,6 +1,8 @@
 # [nwdata.org](http://nwdata.org)
 > directory of civic data resources in the pacific northwest
 
+![nwdata.org screenshot](img/nwdata-screenshot.png)
+
 ### This project is new! Help build this directory of tools & resources!
 You'll notice that not many resources are currently listed. [nwdata.org](http://nwdata.org) started on **November 7, 2013**, and we'll be building out the resources with the goal of having an awesome directory by the end of the year.
 
