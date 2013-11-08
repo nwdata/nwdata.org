@@ -55,6 +55,17 @@ main p#description {
   margin: 20px 0px 30px 0px;
 }
 
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  padding: 10px 0px;
+  border-bottom: 1px solid #f1f1f1;
+  list-style-type: none;
+}
+
 ul.links {
   text-align: center;
   padding: 0px;
@@ -64,6 +75,7 @@ ul.links {
 
 .link {
   display: inline-block;
+  border: 0px;
 }
 
 .link a {
@@ -106,12 +118,15 @@ section h1 {
   margin-bottom: 15px;
 }
 
+
+
 /*
 * STATE
 */
 
 .state {
-
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .state h2 {
@@ -163,6 +178,7 @@ footer {
   padding: 20px 0px;
   color: #fff;
   text-align: center;
+  margin-top: 50px;
 }
 
 footer a {
