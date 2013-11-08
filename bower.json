@@ -1,0 +1,22 @@
+{
+  "name": "nwdata.org",
+  "version": "0.1.0",
+  "homepage": "http://nwdata.org",
+  "authors": [
+    "sethvincent <sethvincent@gmail.com>"
+  ],
+  "description": "a directory of open civic data resources for the pacific northwest",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.2"
+  }
+}
