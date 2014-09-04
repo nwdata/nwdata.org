@@ -130,7 +130,9 @@ section h1 {
 }
 
 .state h2 {
-
+  color:#676765;
+  font-size:40px; 
+  font-weight:700;
 }
 
 .state > ul {
@@ -147,7 +149,7 @@ section h1 {
 }
 
 .county h3 {
-
+  font-size:34px;
 }
 
 .county > ul {
@@ -164,7 +166,7 @@ section h1 {
 }
 
 .city h3 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
 }
