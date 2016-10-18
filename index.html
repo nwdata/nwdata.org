@@ -1,28 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>nwdata.org | a directory of open civic data resources for the pacific northwest.</title>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600,900' rel='stylesheet' type='text/css'>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-  <img id="splash" src="img/splash-pauljarvis.jpg">
-  <div class="container">
-    <img id="logo" src="img/logo-grey.png">
-    <h1 id="title">nwdata.org</h1>
-
-    <p id="description">A directory of open civic data resources <br>for the Pacific Northwest.</p>
-    <ul class="links">
-      <li class="link"><a href="#apps">apps</a></li>
-      <li class="link"><a href="#data">data</a></li>
-      <li class="link"><a href="#resources">resources</a></li>
-    </ul>
-  </div>
-</header>
+---
+layout: default
+---
 
 <main role="main">
   <div class="container">
@@ -41,87 +19,27 @@
       <section id="apps" class="col-md-8 col-md-offset-2">
           <h1>Apps</h1>
           <p>Explore apps built with open civic data.</p>
+          {% for section in site.data.apps %}
 
-          <ul>
-            <h3>Transportation</h3>
-            <li>
-              <a href="http://busdrone.com/" target="_blank">BusDrone</a> – See the position of Seattle busses in real time! Source on <a href="https://github.com/afiler/busdrone/" target="_blank">GitHub</a>
-            </li>
-            <li>
-              <a href="http://pdxlivebus.com/" target="_blank">PDXLiveBus</a> – See the position of TriMet busses in real time! Source on <a href="https://github.com/browniefed/livemet" target="_blank">GitHub</a>
-            </li>
-            <li>
-              <a href="http://www.veloracks.com/" target="_blank">VeloRacks</a> – Find bike racks and nearby businesses.
-            </li>
-            <li><a href="http://wherecanipark.in/seattle/" target="_blank">wherecanipark.in</a> - Interpret Seattle Street Parking to determine where you can park. Source on <a href="https://github.com/lizrush/seapark" target="_blank">Web App</a> and <a href="https://github.com/Elffers/parking-api" target="_blank">API</a> on GitHub</li>
-          	<li>
-          	  <a href="http://durbinware.com/products/nw-ferry" target="_blank">NW Ferry</a> – Find schedules, fares, alerts, cameras and vessel location information for the Washington State Ferries (uses the WSDOT Traveler API).
-          	</li>
-          </ul>
-          
-          <ul>
-            <h3>Built environment</h3>
-            <li>
-              <a href="http://seattle.in-progress.us/" target="_blank">Seattle In Progress</a> – a mobile web app for seeing what's being built in Seattle
-            </li>
-          </ul>
+              <h3>{{ section.section }}</h3>
+                {% for app in section.data %}
+                  <li>
+                    <a href="{{app.url}}">{{app.name}}</a>
+                    {% if app.description %}
+                      – {{ app.description }}
+                    {% endif %}
 
-          <ul>
-            <h3>Educational / How To</h3>
-            <li>
-              <a href="http://www.wdidw.com/" target="_blank">What Do I Do With...?</a> – Allows residents and businesses in King County to find locations to recycle and responsibly dispose of unwanted items. Source on <a href="https://github.com/audreycarlsen/recycling_app" target="_blank">GitHub</a>
-            </li>
-          </ul>
+                    {% if app.source %}
+                      Source on <a href="{{app.source}}">Github</a>.
+                    {% endif %}
 
-          <ul>
-            <h3>Fire / Crime</h3>
-            <li>
-              <a href="https://twitter.com/seattle911" target="_blank">@seattle911 twitter bot</a> – Source on <a href="https://github.com/codebutler/seattle911-twitter" target="_blank">GitHub</a>
-            </li>
-          </ul>
+                    {% if app.api %}
+                      API on <a href="{{app.api}}">Github</a>.
+                    {% endif %}
+                  </li>
+                {% endfor %}
 
-          <ul>
-            <h3>Food safety / restaurant inspections</h3>
-            <li>
-              <a href="http://www.dinegerous.com/" target="_blank">Dinegerous</a> – King County Food Inspections
-            </li>
-          </ul>
-          
-          <ul>
-            <h3>Maps</h3>
-            <li>
-              <a href="http://tsibley.net/trees/seattle/" target="_blank">Seattle's Heritage Trees</a> – Code on <a href="https://github.com/tsibley/seattle-trees" target="_blank">GitHub</a>
-              <a href="https://data.seattle.gov/Community/Heritage-Trees/5979-eagq" target="_blank">Source data</a>
-            </li>
-            <li>
-              <a href="http://mapmydistricts.com/" target="_blank">Map My Districts</a> – Determine if a set of addresses are within a neighborhood or district boundaries by uploading bulk spreadsheets of Seattle addresses or drawing arbitrary polygons. Currently an internal tool for the Seattle Chamber of Commerce but may open to the public in the future.
-            </li>
-          </ul>
-
-          <ul>
-            <h3>Wikis</h3>
-            <li>
-              <a href="http://seattlewiki.net" target="_blank">SeattleWiki</a> – A community-authored resource for Seattle, WA
-            </li>
-            <li>
-              <a href="http://portlandwiki.org/" target="_blank">PortlandWiki</a> – The community powered knowledge commons for Portland, Oregon.
-            </li>
-            <li>
-              <a href="http://localwiki.net/pdx/" target="_blank">localwiki.net/pdx</a> – A community-authored resource for Portland, Oregon.
-            </li>
-            <li>
-              <a href="http://localwiki.net/boise/" target="_blank">BoiseWiki</a> – A community-authored resource for Boise, Idaho
-            </li>
-            <li>
-              <a href="http://olywiki.org" target="_blank">OlyWiki</a> – A community-authored resource for Olympia, WA
-            </li>
-            <li>
-              <a href="https://porttownsendwiki.org" target="_blank">Port Townsend Wiki</a> – A community-authored resource for Port Townsend, WA
-            </li>
-            <li>
-              There are more Pacific Northwest wikis on <a href="http://localwiki.net/" target="_blank">localwiki.net</a>, and you can start a new one there, too!
-            </li>
-          </ul>
+          {% endfor %}
 
           <h3>Help with this section on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
       </section>
@@ -134,202 +52,48 @@
         <h2>State Specific data</h2>
         <p>Washington, Oregon, Idaho and British Columbia are rich with public data sources. Here's a list of what we've found, with descriptions of datasets of note that are available.</p>
 
-        <!--
+        {% for state in site.data.data %}
+          <div class="state">
 
-        <div class="state">
-          <h2></h2>
-
-          <div class="county">
-            <h3></h3>
+            <h2>{{ state.name }}</h2>
 
             <ul>
-              <li>
-                <a href="" target="_blank"></a>
-              </li>
-            </ul>
-
-            <div class="city">
-              <h3>Seattle</h3>
-              <ul>
-                <li><a href="" target="_blank"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        -->
-        <div class="state">
-          <h2>British Columbia</h2>
-
-          <ul>
-            <li>
-              <a href="http://www.data.gov.bc.ca/" target="_blank">data.gov.bc.ca</a>
-            </li>
-          </ul>
-
-          <div class="county">
-            <h3>Greater Vancouver</h3>
-
-            <div class="city">
-              <h3>Vancouver</h3>
-              <ul>
-                <li><a href="http://vancouver.ca/your-government/open-data-catalogue.aspx" target="_blank">Vancouver Open Data catalogue</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="state">
-          <h2>Oregon</h2>
-
-          <ul>
-            <li>
-              <a href="https://data.oregon.gov/" target="_blank">data.oregon.gov</a>
-            </li>
-          </ul>
-
-          <div class="county">
-            <h3>Multnomah County</h3>
-
-            <div class="city">
-              <h3>Portland</h3>
-              <ul>
-                <li><a href="http://www.civicapps.org/datasets" target="_blank">civicapps.org/datasets</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="state">
-          <h2>Washington</h2>
-          
-          <ul>
-            <li>
-              <a href="https://data.wa.gov/" target="_blank">data.wa.gov</a>
-            </li>
-            <li>
-              <a href="http://www.wsdot.wa.gov/traffic/api/" target="_blank">WSDOT Traveler API</a>
-            </li>
-            <li>
-              <a href="http://www.soundtransit.org/Open-Transit-Data" target="_blank">SoundTransit – Open Transit Data</a></li>
-            </li>
-          </ul>
-
-          <div class="county">
-            <h3>King County</h3>
-
-            <ul>
-              <li>
-                <a href="https://data.kingcounty.gov/" target="_blank">data.kingcounty.gov</a>
-              </li>
-              <li>
-                <a href="http://www5.kingcounty.gov/gisdataportal/" target="_blank">King County GIS data</a>
-              </li>
-              <li>
-                <a href="http://localscape.property/" target="_blank">LocalScape</a>
-              </li>
-            </ul>
-
-            <div class="city">
-              <h3>Seattle</h3>
-              <ul>
-                <li><a href="https://data.seattle.gov/" target="_blank">data.seattle.gov</a></li>
-                <li><a href="http://boundaries.seattle.io/" target="_blank">boundaries.seattle.io</a></li>
-              </ul>
-            </div>
-
-            <div class="city">
-              <h3>Redmond</h3>
-              <ul>
-                <li><a href="https://data.redmond.gov" target="_blank">data.redmond.gov</a></li>
-              </ul>
-            </div>
-
-            <div class="city">
-              <h3>Renton</h3>
-              <ul>
-                <li><a href="https://data.rentonwa.gov" target="_blank">data.rentonwa.gov</a></li>
-              </ul>
-            </div>
-
-            <div class="city">
-              <h3>Kenmore</h3>
-              <ul>
-                <li><a href="https://kenmorewa.data.socrata.com/browse" target="_blank">kenmorewa.data.socrata.com</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="county">
-            <h3>Kitsap County</h3>
-              <ul>
+              {% for link in state.links %}
                 <li>
-                <a href="http://www.kitsapgov.com/gis/metadata/" target="_blank">Kitsap County GIS data</a>
-              </li>
+                  <a href="{{link.url}}">{{link.title}}</a>
+                </li>
+              {% endfor %}
             </ul>
+
+            {% for county in state.counties %}
+              <div class="county">
+                <h3>{{county.name}}</h3>
+                <ul>
+                  {% for link in county.links %}
+                    <li>
+                      <a href="{{link.url}}">{{link.title}}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                
+                {% for city in county.cities %}
+                  <div class="city">
+                    <h3>{{city.name}}</h3>
+                    <ul>
+                      {% for link in city.links %}
+                        <li>
+                          <a href="{{link.url}}">{{link.title}}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endfor %}
+                
+              </div>
+            {% endfor %}
+
           </div>
-          
-          <div class="county">
-            <h3>Pierce County</h3>
-
-            <ul>
-              <li>
-                <a href="http://gisdata.piercecowa.opendata.arcgis.com/" target="_blank">Pierce County Open GeoSpatial Data Portal</a>
-              </li>
-            </ul>
-            
-            <div class="city">
-              <h3>Tacoma</h3>
-              <ul>
-                <li><a href="https://data.cityoftacoma.org/" target="_blank">data.cityoftacoma.org</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="county">
-            <h3>San Juan County</h3>
-
-            <ul>
-              <li>
-                <a href="http://data.sjcgis.opendata.arcgis.com/" target="_blank">San Juan County GIS open data portal</a>
-              </li>
-              <li>
-                <a href="http://sanjuanco.com/gis/gislib.aspx" target="_blank">San Juan County GIS data download library</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="county">
-            <h3>Snohomish County</h3>
-
-            <ul>
-              <li>
-                <a href="https://data.snostat.org/" target="_blank">data.snostat.org</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="county">
-            <h3>Spokane County</h3>
-
-            <ul>
-              <li>
-                <a href="http://www.spokanecounty.org/3186/Data-Downloads" target="_blank">Spokane County data downloads</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="county">
-            <h3>Whatcom County</h3>
-          
-            <div class="city">
-              <h3>Bellingham</h3>
-              <ul>
-                <a href="http://cob.org/services/maps/index.aspx" target="_blank">City of Bellingham</a>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </section>
     </div>
 
@@ -381,22 +145,3 @@
   </div>
 </main>
 
-<footer>
-  <div class="container">
-    <p>nwdata.org is a <a href="http://codeforseattle.org" target="_blank">Code for Seattle</a> project.</p>
-
-    <p><small>Banner image by <a href="http://pjrvs.com/" target="_blank">Paul Jarvis</a>. Tree icon by <a href="http://thenounproject.com/edward" target="_blank">Edward Boatman / The Noun Project</a>.</small></p>
-  </div>
-</footer>
-
-<script>
-  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  // 
-  // ga('create', 'UA-38362883-2', 'nwdata.org');
-  // ga('send', 'pageview');
-</script>
-</body>
-</html>
