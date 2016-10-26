@@ -25,7 +25,7 @@
   - name: wherecanipark
     url: http://wherecanipark.in/seattle
     description: Interpret Seattle Street Parking to determine where you can park.
-    github: https://github.com/lizrush/seapark
+    source: https://github.com/lizrush/seapark
     api: https://github.com/Elffers/parking-api
 
   - name: NW Ferry
@@ -50,7 +50,7 @@
 
 - section: Fire / Crime
   data:
-  - name: seattle911 twitter bot
+  - name: "@seattle911 twitter bot"
     url: https://twitter.com/seattle911
     source: https://github.com/codebutler/seattle911-twitter
 
