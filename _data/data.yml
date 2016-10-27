@@ -1,0 +1,129 @@
+# - name: STATE NAME
+#   links:
+#     - title: STATE LINK TITLE
+#       url: STATE LINK URL
+#   counties:
+#     - name: COUNTY NAME
+#       links:
+#         - title: COUNTY LINK TITLE
+#           url: COUNTY LINK URL
+#       cities:
+#         - name: CITY NAME
+#           links:
+#             - title: CITY LINK TITLE
+#               url: CITY LINK URL
+
+- name: British Columbia
+  links:
+    - title: data.gov.bc.ca
+      url: http://www.data.gov.bc.ca/
+
+  counties:
+    - name: Greater Vancouver
+      cities:
+        - name: VANCOUVER
+          links:
+            - title: Vancouver Open Data catalogue
+              url: http://vancouver.ca/your-government/open-data-catalogue.aspx
+
+
+- name: Oregon
+  links:
+    - title: data.oregon.gov
+      url: https://data.oregon.gov
+
+  counties:
+    - name: Multnomah County
+      cities:
+        - name: PORTLAND
+          links:
+            - title: civicapps.org/datasets
+              url: http://www.civicapps.org/datasets
+
+
+- name: Washington
+  links:
+    - title: data.wa.gov
+      url: https://data.wa.gov/
+
+    - title: WSDOT Traveler API
+      url: http://www.wsdot.wa.gov/traffic/api/
+
+    - title: SoundTransit – Open Transit Data
+      url: http://www.soundtransit.org/Open-Transit-Data
+
+  counties:
+    - name: King County
+      links:
+        - title: data.kingcounty.gov
+          url: https://data.kingcounty.gov/
+
+        - title: King County GIS data
+          url: http://www5.kingcounty.gov/gisdataportal/
+
+        - title: LocalScape
+          url: http://localscape.property/
+
+      cities:
+        - name: Seattle
+          links:
+            - title: data.seattle.gov
+              url: https://data.seattle.gov/
+
+            - title: boundaries.seattle.io
+              url: http://boundaries.seattle.io/
+
+        - name: Redmond
+          links:
+            - title: data.redmond.gov
+              url: https://data.redmond.gov
+
+        - name: Renton
+          links:
+            - title: data.rentonwa.gov
+              url: https://data.rentonwa.gov
+
+        - name: Kenmore
+          links:
+            - title: kenmorewa.data.socrata.com
+              url: https://kenmorewa.data.socrata.com/browse
+
+    - name: Kitsap County
+      links:
+      - title: Kitsap County GIS data
+        url: http://www.kitsapgov.com/gis/metadata/
+
+    - name: Pierce County
+      links:
+      - title: Pierce County Open GeoSpatial Data Portal
+        url: http://gisdata.piercecowa.opendata.arcgis.com/
+      cities:
+        - name: Tacoma
+          links:
+            - title: data.cityoftacoma.org
+              url: https://data.cityoftacoma.org/
+
+    - name: San Juan County
+      links:
+      - title: San Juan County GIS open data portal
+        url: http://data.sjcgis.opendata.arcgis.com/
+
+      - title: San Juan County GIS data download library
+        url: http://sanjuanco.com/gis/gislib.aspx
+
+    - name: Snohomish County
+      links:
+      - title: data.snostat.org
+        url: https://data.snostat.org/
+
+    - name: Spokane County
+      links:
+      - title: Spokane County data downloads
+        url: http://www.spokanecounty.org/3186/Data-Downloads
+
+    - name: Whatcom County
+      cities:
+        - name: Bellingham
+          links:
+          - title: City of Bellingham
+            url: http://cob.org/services/maps/index.aspx

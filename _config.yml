@@ -1,0 +1,11 @@
+# Site settings
+title: nwdata.org
+description: >
+  A directory of open civic data resources
+  <br>
+  for the Pacific Northwest.
+baseurl: ""
+
+
+# Build settings
+markdown: kramdown
