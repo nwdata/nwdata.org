@@ -11,22 +11,22 @@ textarea {
   font-weight: 300;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, arial, sans-serif;
 }
 
 header {
-  color: #646462;
+  color: #fff;
   text-align: center;
   width: 100%;
-  height: 0px;
-  background-size: 100%;
-  padding-bottom: 70%;
-}
-
-header #splash {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  background-size: cover;
+  margin-bottom: 50px;
 }
 
 header #logo {
@@ -34,25 +34,25 @@ header #logo {
   height: auto;
 }
 
-header .container {
-  margin-top: -58%;
+header .bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+header .header-nav {
+  position: absolute;
+  top: 50%;
+  height: 30%;
+  width: 100%;
+  margin: -20% 0 0 0;
 }
 
 header h1 {
   font-weight: 700;
   letter-spacing: -2px;
   margin-top: 10px;
-}
-
-header p#description {
-  display: none;
-}
-
-main p#description {
-  display: block;
-  text-align: center;
-  font-size: 17px;
-  margin: 20px 0px 30px 0px;
 }
 
 ul {
@@ -92,7 +92,6 @@ main section {
 }
 
 section#hello {
-  background-color: #f2f2f0;
   padding-top: 0px;
 }
 
@@ -200,7 +199,7 @@ footer a {
   }
 
   header .container {
-    margin-top: -54%;
+    margin-top: -48%;
   }
 
   header h1 {
@@ -211,18 +210,22 @@ footer a {
     display: block;
   }
 
-  main p#description {
-    display: none;
-  }
-
   section#hello {
-    background-color: #fff;
     padding-top: 0px;
-    width: 60%;
     margin: 0px auto;
   }
 
   section#hello h1 {
     font-size: 40px;
+  }
+
+  header .header-nav {
+    margin: -18% 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  header .header-nav {
+    margin: -12% 0 0 0;
   }
 }
