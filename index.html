@@ -2,147 +2,133 @@
 layout: default
 ---
 
-<main role="main">
-  <div class="container">    
+<main role="main" class="container">
+  <div class="col-md-8 col-md-offset-2">
     <section id="hello">
         <h1>Learn about and build apps with civic data for the Pacific Northwest.</h1>
 
         <h3>This project is open source! Help build this directory of tools & resources!</h3>
         <p>Contribute to nwdata.org by <a href="https://github.com/sethvincent/nwdata.org" target="_blank">forking the repository on GitHub</a>. If you're not about to fork the repository and just want to suggest a data source, app, or other resource, you can currently <a href="https://github.com/sethvincent/nwdata.org/issues" target="_blank">make that suggestion via our issues queue on GitHub</a>.
     </section>
-  </div>
+    <section id="apps">
+        <h1>Apps</h1>
+        <p>Explore apps built with open civic data.</p>
 
-  
+        {% for section in site.data.apps %}
 
-  <div class="container">
-    <div class="row">
-      <section id="apps" class="col-md-8 col-md-offset-2">
-          <h1>Apps</h1>
-          <p>Explore apps built with open civic data.</p>
-
-          {% for section in site.data.apps %}
-
-              <h3>{{ section.section }}</h3>
-                {% for app in section.data %}
-                  <li>
-                    <a href="{{app.url}}">{{app.name}}</a>
-                    {% if app.description %}
-                      – {{ app.description }}
-                    {% endif %}
-
-                    {% if app.source %}
-                      Source on <a href="{{app.source}}">Github</a>.
-                    {% endif %}
-
-                    {% if app.api %}
-                      API on <a href="{{app.api}}">Github</a>.
-                    {% endif %}
-                  </li>
-                {% endfor %}
-
-          {% endfor %}
-
-          <h3>Help with this section on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
-      </section>
-    </div>
-
-    <div class="row">
-      <section id="data" class="col-md-8 col-md-offset-2">
-        <h1>Data</h1>
-
-        <h2>State Specific data</h2>
-        <p>Washington, Oregon, Idaho and British Columbia are rich with public data sources. Here's a list of what we've found, with descriptions of datasets of note that are available.</p>
-
-
-        {% for state in site.data.data %}
-          <div class="state">
-
-            <h2>{{ state.name }}</h2>
-
-            <ul>
-              {% for link in state.links %}
+            <h3>{{ section.section }}</h3>
+              {% for app in section.data %}
                 <li>
-                  <a href="{{link.url}}">{{link.title}}</a>
+                  <a href="{{app.url}}">{{app.name}}</a>
+                  {% if app.description %}
+                    – {{ app.description }}
+                  {% endif %}
+
+                  {% if app.source %}
+                    Source on <a href="{{app.source}}">Github</a>.
+                  {% endif %}
+
+                  {% if app.api %}
+                    API on <a href="{{app.api}}">Github</a>.
+                  {% endif %}
                 </li>
               {% endfor %}
-            </ul>
 
-            {% for county in state.counties %}
-              <div class="county">
-                <h3>{{county.name}}</h3>
-                <ul>
-                  {% for link in county.links %}
-                    <li>
-                      <a href="{{link.url}}">{{link.title}}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-
-                {% for city in county.cities %}
-                  <div class="city">
-                    <h3>{{city.name}}</h3>
-                    <ul>
-                      {% for link in city.links %}
-                        <li>
-                          <a href="{{link.url}}">{{link.title}}</a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </div>
-                {% endfor %}
-
-              </div>
-            {% endfor %}
-
-          </div>
         {% endfor %}
-      </section>
-    </div>
-
-
-    <div class="row">
-      <section id="resources" class="col-md-8 col-md-offset-2">
-        <h1>Resources</h1>
-
-        <h2>Census data</h2>
-
-        <ul>
-          <li>
-            Looking for Census data for your project? Check out <a href="http://censusreporter.org/" target="blank">censusreporter.org</a>, a really pleasant tool for browsing census data. <a href="http://censusreporter.org/profiles/16000US5363000-seattle-wa/" target="blank">Here's the profile for Seattle, WA</a>. Scroll down to see graphs.
-          </li>
-        </ul>
-
-        <h2>NW Geo data</h2>
-        <ul>
-          <li>
-            <a href="http://nwdata.geol.pdx.edu/" target="_blank">NW GeoData Clearinghouse</a> – PSU Geology's Data Portal.  Includes Geology Data Sets, Interactive Maps, etc.
-          </li>
-        </ul>
-
-        <h2>Guides</h2>
-        <h3>Coming soon! Help on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
-
-        <h2>Organizations</h2>
-        <ul>
-          <li><a href="http://codeforseattle.org/" target="_blank">Code for Seattle</a> – Seattle, Washington</li>
-          <li><a href="https://twitter.com/CodeforPortland" target="_blank">Code for Portland</a> – Portland, Oregon</li>
-          <li><a href="http://www.spocode.org/" target="_blank">SpoCode</a> – Spokane, Washington</li>
-          <li><a href="http://openboise.org" target="_blank">Open Boise</a> – Boise, Idaho</li>
-          <li><a href="http://civicpatterns.org/" target="_blank">CivicPatterns</a></li>
-          <li><a href="https://www.bikewise.org/" target="_blank">Bikewise</a> – Seattle, Washington</li>
-        </ul>
-        <h3>Help with this section on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
-
-        <h2>Companies</h2>
-        <p>Based in the Pacific Northwest, these companies offer services related to open data, data visualization, etc.</p>
-
-        <ul>
-          <li><a href="http://socrata.com" target="_blank">Socrata</a></li>
-          <li><a href="http://tableausoftware.com" target="_blank">Tableau</a></li>
-        </ul>
 
         <h3>Help with this section on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
-      </section>
-    </div>
+    </section>
+    <section id="data">
+      <h1>Data</h1>
+
+      <h2>State Specific data</h2>
+      <p>Washington, Oregon, Idaho and British Columbia are rich with public data sources. Here's a list of what we've found, with descriptions of datasets of note that are available.</p>
+
+
+      {% for state in site.data.data %}
+        <div class="state">
+
+          <h2>{{ state.name }}</h2>
+
+          <ul>
+            {% for link in state.links %}
+              <li>
+                <a href="{{link.url}}">{{link.title}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          {% for county in state.counties %}
+            <div class="county">
+              <h3>{{county.name}}</h3>
+              <ul>
+                {% for link in county.links %}
+                  <li>
+                    <a href="{{link.url}}">{{link.title}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+
+              {% for city in county.cities %}
+                <div class="city">
+                  <h3>{{city.name}}</h3>
+                  <ul>
+                    {% for link in city.links %}
+                      <li>
+                        <a href="{{link.url}}">{{link.title}}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+
+            </div>
+          {% endfor %}
+
+        </div>
+      {% endfor %}
+    </section>
+    <section id="resources">
+      <h1>Resources</h1>
+
+      <h2>Census data</h2>
+
+      <ul>
+        <li>
+          Looking for Census data for your project? Check out <a href="http://censusreporter.org/" target="blank">censusreporter.org</a>, a really pleasant tool for browsing census data. <a href="http://censusreporter.org/profiles/16000US5363000-seattle-wa/" target="blank">Here's the profile for Seattle, WA</a>. Scroll down to see graphs.
+        </li>
+      </ul>
+
+      <h2>NW Geo data</h2>
+      <ul>
+        <li>
+          <a href="http://nwdata.geol.pdx.edu/" target="_blank">NW GeoData Clearinghouse</a> – PSU Geology's Data Portal.  Includes Geology Data Sets, Interactive Maps, etc.
+        </li>
+      </ul>
+
+      <h2>Guides</h2>
+      <h3>Coming soon! Help on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
+
+      <h2>Organizations</h2>
+      <ul>
+        <li><a href="http://codeforseattle.org/" target="_blank">Code for Seattle</a> – Seattle, Washington</li>
+        <li><a href="https://twitter.com/CodeforPortland" target="_blank">Code for Portland</a> – Portland, Oregon</li>
+        <li><a href="http://www.spocode.org/" target="_blank">SpoCode</a> – Spokane, Washington</li>
+        <li><a href="http://openboise.org" target="_blank">Open Boise</a> – Boise, Idaho</li>
+        <li><a href="http://civicpatterns.org/" target="_blank">CivicPatterns</a></li>
+        <li><a href="https://www.bikewise.org/" target="_blank">Bikewise</a> – Seattle, Washington</li>
+      </ul>
+      <h3>Help with this section on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
+
+      <h2>Companies</h2>
+      <p>Based in the Pacific Northwest, these companies offer services related to open data, data visualization, etc.</p>
+
+      <ul>
+        <li><a href="http://socrata.com" target="_blank">Socrata</a></li>
+        <li><a href="http://tableausoftware.com" target="_blank">Tableau</a></li>
+      </ul>
+
+      <h3>Help with this section on <a href="https://github.com/sethvincent/nwdata.org" target="_blank">GitHub</a>.</h3>
+    </section>
   </div>
 </main>
