@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '4'
+- '6'
+sudo: false
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - rvm install 2.2.2
+
+script:
+- npm run build
+
+after_success:
+- staticland login -e $user -p $key
+- npm run deploy

@@ -1,6 +1,4 @@
 .DS_Store
 _site
-bower_components
-.sass-cache
+node_modules
 .jekyll-metadata
-

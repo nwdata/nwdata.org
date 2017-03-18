@@ -1,0 +1,25 @@
+{
+  "name": "nwdata.org",
+  "version": "1.0.0",
+  "description": "A directory of open data & civic tech resources for the Pacific Northwest.",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "bundle install",
+    "build": "jekyll build",
+    "deploy": "npm run build && staticland _site nwdata.org",
+    "start": "jekyll start -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethvincent/nwdata.org.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethvincent/nwdata.org/issues"
+  },
+  "homepage": "https://github.com/sethvincent/nwdata.org#readme",
+  "devDependencies": {
+    "staticland": "^3.2.2"
+  }
+}
