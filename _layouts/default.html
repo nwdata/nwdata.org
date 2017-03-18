@@ -1,6 +1,18 @@
-{% include head.html %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title}}{% else if post.title %}{{ post.title }} | {{ site.title}}{% else %}{{ site.title }} | {{ site.description}}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else if post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,900" rel="stylesheet" type="text/css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+</html>
+<body>
 {% include header.html %}
-
-  {{ content }}
-
+{{ content }}
 {% include footer.html %}
+</body>
+</html>

@@ -1,9 +1,6 @@
 # Site settings
 title: nwdata.org
-description: >
-  A directory of open civic data resources
-  <br>
-  for the Pacific Northwest.
+description: "A directory of open data & civic tech resources for the Pacific Northwest"
 baseurl: ""
 
 
