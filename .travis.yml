@@ -11,7 +11,7 @@ before_install:
   - rvm install 2.2.2
 
 script:
-- npm run build
+ - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run build; fi'
 
 after_success:
 - staticland login -e $user -p $key
