@@ -1,0 +1,11 @@
+- type: "Northwest resources"
+  resources:
+    - name: "NW GeoData Clearinghouse"
+      url: "http://nwdata.geol.pdx.edu/"
+      description: <"PSU Geology's Data Portal.  Includes Geology Data Sets, Interactive Maps, etc."
+
+- type: "National resources"
+  resources:
+    - name: "Census Reporter"
+      url: "http://censusreporter.org/"
+      description: "Looking for Census data for your project? Check out <a href="http://censusreporter.org/" target="blank">censusreporter.org</a>, a really pleasant tool for browsing census data. <a href="http://censusreporter.org/profiles/16000US5363000-seattle-wa/" target="blank">Here's the profile for Seattle, WA</a>. Scroll down to see graphs."
