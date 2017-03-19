@@ -17,9 +17,9 @@ install:
   - npm install
 
 script:
- - '$TRAVIS_PULL_REQUEST == "false" && npm run build'
+ - 'npm run build'
 
 after_success:
   - 'echo $wut'
-  - '$TRAVIS_PULL_REQUEST == "false" && staticland login -e $user -p $key'
-  - '$TRAVIS_PULL_REQUEST == "false" && npm run deploy'
+  - 'staticland login -e $user -p $key'
+  - 'npm run deploy'
