@@ -13,9 +13,12 @@ branches:
 before_install:
   - rvm install 2.2.2
 
+install:
+  - npm install
+
 script:
- - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run build; fi'
+ - '$TRAVIS_PULL_REQUEST == "false" && npm run build'
 
 after_success:
-- 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then staticland login -e $user -p $key; fi'
-- 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; npm run deploy; fi'
+- '$TRAVIS_PULL_REQUEST == "false" && staticland login -e $user -p $key'
+- '$TRAVIS_PULL_REQUEST == "false" && npm run deploy'
