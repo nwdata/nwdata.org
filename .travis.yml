@@ -20,5 +20,6 @@ script:
  - '$TRAVIS_PULL_REQUEST == "false" && npm run build'
 
 after_success:
-- '$TRAVIS_PULL_REQUEST == "false" && staticland login -e $user -p $key'
-- '$TRAVIS_PULL_REQUEST == "false" && npm run deploy'
+  - 'echo $wut'
+  - '$TRAVIS_PULL_REQUEST == "false" && staticland login -e $user -p $key'
+  - '$TRAVIS_PULL_REQUEST == "false" && npm run deploy'
