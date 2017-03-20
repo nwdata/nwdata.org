@@ -20,5 +20,5 @@ script:
  - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then npm run build; fi'
 
 after_success:
-- 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then staticland login -e $user -p $key; fi'
-- 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; npm run deploy; fi'
+- 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then staticland login -e $email -p $key; fi'
+- 'if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then npm run deploy; fi'
