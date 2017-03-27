@@ -46,12 +46,27 @@
     - title: data.wa.gov
       url: https://data.wa.gov/
 
-    - title: WSDOT Traveler API
-      url: http://www.wsdot.wa.gov/traffic/api/
-
     - title: SoundTransit – Open Transit Data
       url: http://www.soundtransit.org/Open-Transit-Data
 
+    - title: WSDOT Maps and Geospatial Data
+      url: http://www.wsdot.wa.gov/mapsdata.htm
+
+    - title: WSDOT Traveler API
+      url: http://www.wsdot.wa.gov/traffic/api/
+
+    - title: Washington State GeoServices Portal
+        url: http://wa-geoservices.maps.arcgis.com/home/
+
+    - title: Washington State GeoSpatial Portal
+        url: http://geography.wa.gov/node/111
+
+    - title: Washington State Marine Spatial Planning
+      url: http://msp.wa.gov/
+
+    - title: Washington State Open Data Bridge
+      url: http://geo.wa.gov/
+      
   counties:
     - name: King County
       links:
@@ -126,4 +141,4 @@
         - name: Bellingham
           links:
           - title: City of Bellingham
-            url: http://cob.org/services/maps/index.aspx
+            url: http://cob.org/services/maps/
