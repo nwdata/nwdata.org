@@ -7,7 +7,7 @@
     "prepublish": "bundle install",
     "build": "jekyll build",
     "deploy": "npm run build && staticland _site nwdata.org",
-    "start": "jekyll start -w"
+    "start": "jekyll serve -w"
   },
   "repository": {
     "type": "git",
