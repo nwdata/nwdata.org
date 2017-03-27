@@ -8,11 +8,6 @@
 
 - section: Transportation
   data:
-  - name: BusDrone
-    url: http://busdrone.com
-    description: See the position of Seattle busses in real time!
-    source: https://github.com/afiler/busdrone
-
   - name: PDXLiveBus
     url: http://pdxlivebus.com
     description: See the position of TriMet busses in real time!
@@ -21,12 +16,6 @@
   - name: VeloRacks
     url: http://www.veloracks.com
     description: Find bike racks and nearby businesses.
-
-  - name: wherecanipark
-    url: http://wherecanipark.in/seattle
-    description: Interpret Seattle Street Parking to determine where you can park.
-    source: https://github.com/lizrush/seapark
-    api: https://github.com/Elffers/parking-api
 
   - name: NW Ferry
     url: http://durbinware.com/products/nw-ferry
@@ -38,15 +27,6 @@
   - name: Seattle In Progress
     url: http://seattle.in-progress.us
     description: a mobile web app for seeing what's being built in Seattle
-
-
-- section: Educational / How To
-  data:
-  - name: What Do I Do With...?
-    url: http://www.wdidw.com
-    description: Allows residents and businesses in King County to find locations to recycle and responsibly dispose of unwanted items.
-    source: https://github.com/audreycarlsen/recycling_app
-
 
 - section: Fire / Crime
   data:
@@ -69,36 +49,32 @@
     source: https://github.com/tsibley/seattle-trees
     data: https://data.seattle.gov/Community/Heritage-Trees/5979-eagq
 
-  - name: Map My Districts
-    url: http://mapmydistricts.com
-    description: Determine if a set of addresses are within a neighborhood or district boundaries by uploading bulk spreadsheets of Seattle addresses or drawing arbitrary polygons. Currently an internal tool for the Seattle Chamber of Commerce but may open to the public in the future.
-
 
 - section: Wikis
   data:
   - name: SeattleWiki
     description: A community-authored resource for Seattle, WA
-    url: href="http://seattlewiki.net
+    url: http://localwiki.org/seattle
 
   - name: PortlandWiki
     description: The community powered knowledge commons for Portland, Oregon.
-    url: href="http://portlandwiki.org
+    url: http://portlandwiki.org
 
-  - name: localwiki.net/pdx
+  - name: LocalWiki Portland
     description: A community-authored resource for Portland, Oregon.
-    url: href="http://localwiki.net/pdx
+    url: https://localwiki.org/pdx
 
   - name: BoiseWiki
     description: A community-authored resource for Boise, Idaho
-    url: href="http://localwiki.net/boise
+    url: https://localwiki.org/boise
 
   - name: OlyWiki
     description: A community-authored resource for Olympia, WA
-    url: href="http://olywiki.org
+    url: https://localwiki.org/oly
 
-  - name: Port Townsend Wiki
-    description: A community-authored resource for Port Townsend, WA
-    url: href="https://porttownsendwiki.org
+  - name: LocalWiki Bellingham
+    description: A community-authored resource for Bellingham, WA
+    url: https://localwiki.org/bellingham
 
 
 
