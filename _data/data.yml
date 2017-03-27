@@ -123,19 +123,6 @@
       - title: San Juan County GIS open data portal
         url: http://data.sjcgis.opendata.arcgis.com/
 
-      - title: San Juan County GIS data download library
-        url: http://sanjuanco.com/gis/gislib.aspx
-
-    - name: Snohomish County
-      links:
-      - title: data.snostat.org
-        url: https://data.snostat.org/
-
-    - name: Spokane County
-      links:
-      - title: Spokane County data downloads
-        url: http://www.spokanecounty.org/3186/Data-Downloads
-
     - name: Whatcom County
       cities:
         - name: Bellingham
