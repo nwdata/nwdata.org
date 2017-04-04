@@ -25,7 +25,7 @@
 - section: Built environment
   data:
   - name: Seattle In Progress
-    url: http://seattle.in-progress.us
+    url: https://www.seattleinprogress.com/
     description: a mobile web app for seeing what's being built in Seattle
 
 - section: Fire / Crime
