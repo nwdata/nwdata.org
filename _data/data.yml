@@ -66,7 +66,7 @@
 
     - title: Washington State Open Data Bridge
       url: http://geo.wa.gov/
-      
+
   counties:
     - name: King County
       links:
@@ -87,6 +87,9 @@
 
             - title: boundaries.seattle.io
               url: http://boundaries.seattle.io/
+
+            - title: openbudget.seattle.gov
+              url: https://openbudget.seattle.gov/
 
         - name: Redmond
           links:
