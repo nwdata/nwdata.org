@@ -68,6 +68,13 @@
       url: http://geo.wa.gov/
 
   counties:
+    - name: Clark County
+        cities:
+          - name: City of Washougal
+            links:
+            - title: City of Washougal
+              url: https://washougalwa.opengov.com/transparency
+
     - name: King County
       links:
         - title: data.kingcounty.gov
