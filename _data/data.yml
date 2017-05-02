@@ -72,8 +72,8 @@
         cities:
           - name: City of Washougal
             links:
-            - title: City of Washougal
-              url: https://washougalwa.opengov.com/transparency
+              - title: City of Washougal
+                url: https://washougalwa.opengov.com/transparency
 
     - name: King County
       links:
