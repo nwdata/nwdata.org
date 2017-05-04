@@ -137,19 +137,19 @@
       cities:
         - name: Bothell
           links:
-          - title: City of Bothell GIS Data
-            url: http://www.bothellwa.gov/238/GIS-Data
+            - title: City of Bothell GIS Data
+              url: http://www.bothellwa.gov/238/GIS-Data
 
     - name: Whatcom County
       cities:
         - name: Bellingham
           links:
-          - title: City of Bellingham
-            url: http://cob.org/services/maps/
+            - title: City of Bellingham
+              url: http://cob.org/services/maps/
 
     - name: Yakima County
       cities:
         - name: Yakima
           links:
-          - title: City of Yakima Open Data
-            url: http://opendata.yakimawa.gov/        
+            - title: City of Yakima Open Data
+              url: http://opendata.yakimawa.gov/        
